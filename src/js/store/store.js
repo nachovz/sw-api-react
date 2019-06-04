@@ -1,21 +1,44 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			favorites: [
+			people: [
 				{
 					name: "Luke Skywalker",
-					path:
-						"http://star-wars-blog-using-react-enriqueesmith.c9users.io:8080/details/1"
+					gender: "male",
+					height: "6ft",
+					hair: "Brown",
+					birth: "1234"
 				},
 				{
-					name: "Alderaan",
-					path:
-						"http://star-wars-blog-using-react-enriqueesmith.c9users.io:8080/details_planets/1"
+					name: "Leia Organa",
+					gender: "female",
+					height: "5ft",
+					hair: "Dark brown",
+					birth: "1234"
+				},
+				{
+					name: "C3PO",
+					gender: "construct",
+					height: "6ft",
+					hair: "None/Gold",
+					birth: "1240"
 				}
 			],
-
-			detailsPeoples: [],
-			detailsPlanets: []
+			planets: [
+				{
+					name: "Tatooine",
+					population: "1.000.000"
+				},
+				{
+					name: "Corusant",
+					population: "500.000.000.000"
+				},
+				{
+					name: "Hoth",
+					population: "450.000"
+				}
+			],
+			favorites: []
 		},
 		actions: {
 			addToFavorites: koala => {
@@ -24,7 +47,7 @@ const getState = ({ getStore, setStore }) => {
 					name: koala
 				};
 				tempStore.favorites.push(newFavorite);
-				setStore({ tempStore });
+				//setStore({ tempStore });
 			}
 			/*
 			getPeople: () => {
@@ -39,7 +62,7 @@ const getState = ({ getStore, setStore }) => {
 						temp.people = horse;
 						setStore({ temp });
 					});
-					
+
 			}*/
 		}
 	};

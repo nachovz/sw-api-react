@@ -24,17 +24,17 @@ const Store = PassedComponent => {
 				.then(response => response.json())
 				.then(data => {
 					let { store } = this.state;
-					store.detailsPeoples = data.results;
-					this.setState({ store });
-					console.log(data);
+					//store.detailsPeoples = data.results;
+					//this.setState({ store });
+					//console.log(data);
 				});
 			fetch("https://swapi.co/api/planets/")
 				.then(response => response.json())
 				.then(dataPlanets => {
 					let { store } = this.state;
-					store.detailsPlanets = dataPlanets.results;
-					this.setState({ store });
-					console.log(dataPlanets);
+					//store.detailsPlanets = dataPlanets.results;
+					//this.setState({ store });
+					//console.log(dataPlanets);
 				});
 		}
 

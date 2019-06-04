@@ -6,11 +6,12 @@ function DemoList(props) {
 	return (
 		<ul>
 			<Context.Consumer>
-				{({ store }) => {
-					return store.products.map((item, index) => {
-						return <li key={index}>{item.name}</li>;
-					});
-				}}
+				{
+          (flux) => {
+            console.log(flux);
+					}
+				  }
+        }
 			</Context.Consumer>
 		</ul>
 	);
